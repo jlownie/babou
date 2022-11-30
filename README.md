@@ -1,5 +1,5 @@
 # Babou
-Babou contains a script for creating and downloading images using the OpenAI DALL·E API.
+Babou contains a Linux bash script for creating and downloading images using the OpenAI DALL·E API.
 ## Setup
 
 1. Install the package `jq` (if necessary)
