@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROMPT=$(cat prompt.txt)
-OUTFILE=image.png
+OUTFILE=dall-e_image.png
 KEY=$(cat openai_key)
 
 curl https://api.openai.com/v1/images/generations \
