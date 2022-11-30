@@ -2,7 +2,7 @@
 Babou contains a Linux bash script for creating and downloading images using the OpenAI DALL·E API.
 ## Setup
 
-1. Install the package `jq` (if necessary)
+1. Install jq and curl (if necessary)
 1. Clone this repository
 1. Put your key into the file `openai_key`
    1. If you don't already have an OpenAI account you can [sign up for one](https://beta.openai.com/signup)
