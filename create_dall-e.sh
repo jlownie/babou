@@ -11,5 +11,5 @@ curl https://api.openai.com/v1/images/generations \
     \"response_format\": \"b64_json\",
     \"prompt\": \"$PROMPT\",
     \"n\": 1,
-    \"size\": \"256x256\"
+    \"size\": \"1024x1024\"
 }" | jq .data[].b64_json | tr -d '"' | base64 -d > $OUTFILE
