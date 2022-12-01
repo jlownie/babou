@@ -1,9 +1,11 @@
 #/usr/bin/python3
 
-import openai
+import openai, base64
 
 keyfileName='openai_key'
 promptfileName='prompt.txt'
+imageFileName='dall-e_image.png'
+
 # 1 - minimal output
 # 2 - informational
 # 3 - debug
@@ -29,8 +31,13 @@ printOutput("prompt: " + prompt, 3)
 
 response = openai.Image.create(
   prompt=prompt,
+  response_format="b64_json",
   n=1,
-  size="1024x1024"
+  #size="1024x1024"
+  size="256x256"
 )
-image_url = response['data'][0]['url']
-print( image_url )
+# Decode image
+imageData = base64.b64decode(response['data'][0]['b64_json'])
+# Create file
+imageFile = open(imageFileName, 'wb')
+imageFile.write(imageData)
